@@ -62,8 +62,7 @@ img {
 
 <!-- Slide Show -->
 <section id="home">
-  <img class="mySlides" src="https://echo-development.echobot.xyz/logo/logo-mane.PNG"
-  style="width:100%" onContextMenu="return false;">
+  <img class="mySlides" src="https://echo-development.echobot.xyz/logo/logo-mane.PNG" style="width:100%">
 </section>
 
 <!-- Echo Development -->
@@ -128,6 +127,13 @@ function myFunction() {
   }
 }
 </script>
-
+<script>
+ let allImages = document.querySelectorAll("img");
+allImages.forEach((value)=>{
+    value.oncontextmenu = (e)=>{
+        e.preventDefault();
+    }
+})
+ </script>
 </body>
 </html>
