@@ -24,7 +24,7 @@ function darkMode() {
 		element.classList.toggle("dark-mode");
 	}
 
-<script>
+
 (function() {
   let onpageLoad = localStorage.getItem("theme") || "";
   let element = document.body;
@@ -46,4 +46,3 @@ function themeToggle() {
 
   document.getElementById("theme").textContent = localStorage.getItem("theme");
 }
-</script>
