@@ -16,19 +16,31 @@ function scrollFunction() {
 }
 
 
-function darkMode() {
-  var element = document.body;
-  element.classList.toggle("dark-theme");
-  var x = document.getElementById("theme");
-  if (x.innerHTML === "Dark Mode") {
-    x.innerHTML = "Light Mode";
-  } else {
-    x.innerHTML = "Dark Mode";
-  }
-}
-const setCookie = (name, value, exdays) => {
-    const d = new Date(); // Gets current date
-    d.setTime(d.getTime() + (exdays*24*60*60*1000)); //calculates the date when it has to expire
-    const expires = "expires="+ d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/"; // sets the cookie
-}
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+
+
+    (function() {
+      let onpageLoad = localStorage.getItem("theme") || "";
+      let element = document.body;
+      element.classList.add(onpageLoad);
+      document.getElementById("theme").textContent =
+        localStorage.getItem("theme") || "light";
+    })();
+    
+    function themeToggle() {
+      let element = document.body;
+      element.classList.toggle("dark-mode");
+    
+      let theme = localStorage.getItem("theme");
+      if (theme && theme === "dark-mode") {
+        localStorage.setItem("theme", "");
+      } else {
+        localStorage.setItem("theme", "dark-mode");
+      }
+    
+      document.getElementById("theme").textContent = localStorage.getItem("theme");
+    }
+    
