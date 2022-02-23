@@ -235,27 +235,10 @@ input:checked + .slider:before {
 </footer>
 <!-- partial -->
 <script>
-(function() {
-  let onpageLoad = localStorage.getItem("theme") || "";
-  let element = document.body;
-  element.classList.add(onpageLoad);
-  document.getElementById("theme").textContent =
-    localStorage.getItem("theme") || "light";
-})();
-
-function themeToggle() {
-  let element = document.body;
-  element.classList.toggle("dark-mode");
-
-  let theme = localStorage.getItem("theme");
-  if (theme && theme === "dark-mode") {
-    localStorage.setItem("theme", "");
-  } else {
-    localStorage.setItem("theme", "dark-mode");
-  }
-
-  document.getElementById("theme").textContent = localStorage.getItem("theme");
-}
+function darkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
     </script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
