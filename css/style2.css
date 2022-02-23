@@ -1,6 +1,11 @@
  ::selection {
   background: #51565D;
 }
+
+.dark-mode {
+		background-color: black;
+		color: white;
+	}
 .content {
   padding: 16px;
 }
