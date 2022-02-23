@@ -5,10 +5,7 @@ var mybutton = document.getElementById("myBtn");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
-// Getting
-var theme = window.localStorage.getItem('theme')
-// Setting
-window.localStorage.setItem('theme', 'dark')
+
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -18,13 +15,29 @@ function scrollFunction() {
   }
 }
 
+
+
+// On page load set the theme.
+(function() {
+  let onpageLoad = localStorage.getItem("theme") || "";
+  let element = document.body;
+  element.classList.add(onpageLoad);
+  document.getElementById("theme").textContent =
+    localStorage.getItem("theme") || "light";
+})();
+
 function darkMode() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-  // Getting
-var theme = window.localStorage.getItem('theme')
-// Setting
-window.localStorage.setItem('theme', 'dark')
+  let element = document.body;
+  element.classList.toggle("dark-mode");
+
+  let theme = localStorage.getItem("theme");
+  if (theme && theme === "dark-mode") {
+    localStorage.setItem("theme", "");
+  } else {
+    localStorage.setItem("theme", "dark-mode");
+  }
+
+  document.getElementById("theme").textContent = localStorage.getItem("theme");
 }
 
 
