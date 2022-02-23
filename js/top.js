@@ -13,11 +13,10 @@ function scrollFunction() {
   }
 }
 
-
 function darkMode() {
-		var element = document.body;
-		element.classList.toggle("dark-mode");
-	}
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
 
 
 // When the user clicks on the button, scroll to the top of the document
