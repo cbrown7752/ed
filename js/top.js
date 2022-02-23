@@ -16,10 +16,19 @@ function scrollFunction() {
 }
 
 
-
 function darkMode() {
-  const formElem = document.getElementById('dark-mode');
-  const formData = new FormData(formElem);
-  const darkModeState = !!formData.get('toggler');
-  localStorage.setItem('darkMode', darkModeState);
+  var element = document.body;
+  element.classList.toggle("dark-theme");
+  var x = document.getElementById("theme");
+  if (x.innerHTML === "Dark Mode") {
+    x.innerHTML = "Light Mode";
+  } else {
+    x.innerHTML = "Dark Mode";
+  }
+}
+const setCookie = (name, value, exdays) => {
+    const d = new Date(); // Gets current date
+    d.setTime(d.getTime() + (exdays*24*60*60*1000)); //calculates the date when it has to expire
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/"; // sets the cookie
 }
