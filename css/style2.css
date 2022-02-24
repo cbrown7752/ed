@@ -3,8 +3,7 @@
 }
 
 
-.dark-mode,
-.light-grey {
+.dark-mode{
 		background-color: black;
 		color: white;
 	}
