@@ -3,7 +3,11 @@
 }
 
 
-.dark-mode .light-gray {
+.dark-mode .light-grey {
+        background-color: black;
+        color: white;
+    }
+    .dark-mode {
         background-color: black;
         color: white;
     }
