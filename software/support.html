@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://echo-development.echobot.xyz/css/style2.css">
+<link rel="stylesheet" href="https://echo-development.echobot.xyz/css/dark.css">
+<link rel="stylesheet" href="https://echo-development.echobot.xyz/css/style2.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.1.7/css/fork-awesome.min.css'>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
@@ -112,7 +113,7 @@
 
 
 
-<!-- Footer -->
+ <!-- Footer -->
 <footer>
 <div class="mt-5 pt-5 pb-5 footer">
 <div class="container">
@@ -125,9 +126,9 @@
     <div class="col-lg-3 col-xs-12 links">
       <h4 class="mt-lg-0 mt-sm-3">Links</h4>
         <ul class="m-0 p-0">
-          <li>- <a href="https://echo-development.echobot.xyz#volunteer">Volunteer</a></li>
-          <li>- <a href="https://echo-development.echobot.xyz#contact">Contact</a></li>
-          <li>- <a href="https://echo-development.echobot.xyz#projects">Projects</a></li>
+          <li>- <a href="#volunteer">Volunteer</a></li>
+          <li>- <a href="#contact">Contact</a></li>
+          <li>- <a href="#projects">Projects</a></li>
          <li>- <a href="http://echo-development.echobot.xyz/news">News</a></li>
           <li>- <a href="http://echo-development.echobot.xyz/software">Software / Games</a></li>
           <li>- <a href="https://app-store.echobot.xyz/">App Store</a></li>
@@ -137,6 +138,11 @@
       <h4 class="mt-lg-0 mt-sm-4">Info</h4>
       <p class="mb-0"><i class="fa fa-phone mr-3"></i>(615) 953-0816</p>
       <p><i class="fa fa-envelope-o mr-3"></i>support@echobot.xyz</p>
+      <h4 class="mt-lg-0 mt-sm-3">Dark Mode</h4>
+      <label class="switch">
+        <input type="checkbox">
+        <span onclick="themeToggle()" class="slider"></span>
+      </label>
     </div>
   </div>
   <div class="row mt-5">
@@ -147,20 +153,11 @@
 </div>
 </div>
 </footer>
+<!-- partial -->
 
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-</script>
+<script src='https://echo-development.echobot.xyz/js/dark.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script>
+<script src='https://echo-development.echobot.xyz/js/top.js'></script>
 </body>
 </html>
