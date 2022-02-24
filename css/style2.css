@@ -1,21 +1,6 @@
  ::selection {
   background: #51565D;
 }
-
-
-.dark-mode .light-grey {
-        background-color: black;
-        color: white;
-    }
-    .dark-mode {
-        background-color: black;
-        color: white;
-    }
-
-.light-grey {
-    color: #000;
-    background-color: #f1f1f1;
-}
 .switch {
   position: relative;
   display: inline-block;
